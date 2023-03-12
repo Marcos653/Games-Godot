@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://resources/normal_decoration.tres" type="TileSet" id=1]
+[ext_resource path="res://resources/small_decoration.tres" type="TileSet" id=2]
+[ext_resource path="res://scenes/env/background.tscn" type="PackedScene" id=3]
+[ext_resource path="res://resources/floor.tres" type="TileSet" id=4]
+[ext_resource path="res://scenes/env/mask.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/player/player.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+glow_enabled = true
+glow_hdr_threshold = 1.5
+
+[node name="Level" type="Node2D"]
+
+[node name="LevelDesign" type="Node2D" parent="."]
+
+[node name="Floor" type="TileMap" parent="LevelDesign"]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262144, 0, 0, 262145, 0, 1, 262146, 0, 1, 262147, 0, 1, 262148, 0, 1, 262149, 0, 1, 262150, 0, 1, 262151, 0, 1, 262152, 0, 1, 262153, 0, 2, 262158, 0, 0, 262159, 0, 1, 262160, 0, 1, 262161, 0, 2, 327680, 0, 131072, 327681, 0, 131073, 327682, 0, 131073, 327683, 0, 131073, 327684, 0, 131073, 327685, 0, 131073, 327686, 0, 131073, 327687, 0, 131073, 327688, 0, 131073, 327689, 0, 131074, 327694, 0, 131072, 327695, 0, 131073, 327696, 0, 131073, 327697, 0, 131074, 589838, 0, 0, 589839, 0, 1, 589840, 0, 1, 589841, 0, 1, 589842, 0, 2, 655374, 0, 131072, 655375, 0, 131073, 655376, 0, 131073, 655377, 0, 131073, 655378, 0, 131074 )
+
+[node name="NormalDecoration" type="TileMap" parent="LevelDesign"]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 131079, 2, 0, 196608, 3, 0, 196610, 0, 0, 196623, 1, 0, 524304, 5, 0 )
+
+[node name="SmallDecoration" type="TileMap" parent="LevelDesign"]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 458754, 2, 0, 458755, 2, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458781, 2, 0, 458782, 2, 0, 1114142, 0, 0, 1114149, 0, 0 )
+
+[node name="Background" parent="." instance=ExtResource( 3 )]
+
+[node name="Mask" parent="." instance=ExtResource( 5 )]
+
+[node name="Player" parent="." instance=ExtResource( 6 )]
+position = Vector2( 125, 79 )
+
+[node name="Environment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
