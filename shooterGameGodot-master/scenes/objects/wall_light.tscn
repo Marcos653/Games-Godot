@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://eljfjapr8cj0"]
+
+[ext_resource type="Texture2D" uid="uid://wqhiwj8ooief" path="res://graphics/objects/wall_lamp.png" id="1_iydqo"]
+[ext_resource type="Texture2D" uid="uid://mw61cmrgnfof" path="res://graphics/lights/textures/circle.png" id="2_qrgl5"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_14b88"]
+polygon = PackedVector2Array(210, 50, 218, 51, 221, 45, 221, 41, 225, 39, 225, 5, 221, 2, 219, -6, 212, -9, 211, -5, 209, -4)
+
+[node name="WallLight" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-418, 18, -372, -40, -332, -66, -290, -76, -286, -80, 276, -79, 282, -77, 330, -67, 373, -35, 415, 17, 395, 69, 374, 78, -389, 75)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iydqo")
+region_enabled = true
+region_rect = Rect2(0, 0, 840.5, 164)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.658824, 0.607843, 1, 1)
+energy = 7.0
+shadow_enabled = true
+shadow_filter = 1
+texture = ExtResource("2_qrgl5")
+texture_scale = 2.0
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_14b88")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(-3, -2)
+scale = Vector2(-1, 1)
+occluder = SubResource("OccluderPolygon2D_14b88")
