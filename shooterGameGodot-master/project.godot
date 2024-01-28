@@ -19,11 +19,14 @@ config/icon="res://icon.svg"
 
 Globals="*res://globals/globals.gd"
 TransitionLayer="*res://globals/transition_layer.tscn"
+Music="*res://globals/music.tscn"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+mouse_cursor/custom_image="res://graphics/ui/crosshair159.png"
+mouse_cursor/custom_image_hotspot=Vector2(17, 17)
 
 [importer_defaults]
 

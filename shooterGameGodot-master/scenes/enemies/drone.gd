@@ -39,6 +39,7 @@ func hit():
 		vulnerable = false
 		$Timers/HitTimer.start()
 		$DroneImage.material.set_shader_parameter("progress", 0.9)
+		$Sounds/HitSound.play()
 	
 	if health <= 0:
 		$AnimationPlayer.play("explosion")

@@ -65,9 +65,9 @@ point_count = 19
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eteiw"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_cclih"]
-vertices = PackedVector2Array(3314, 725, 2786, 758, 2795, 201, 3615, -88, 3622, 201, 2474, 203, 2473, -92, 4185, 203, 4360, 206, 4355, 1920, 3337, 1936, 4056, 195)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 3, 2), PackedInt32Array(7, 8, 9, 10, 0, 4), PackedInt32Array(7, 4, 11)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(2473, -92, 3615, -88, 3622, 201, 4056, 195, 4185, 203, 4360, 206, 4355, 1920, 3337, 1936, 3314, 725, 2786, 758, 2795, 201, 2474, 203)])
+vertices = PackedVector2Array(3314, 725, 2786, 758, 2795, 201, 3615, -88, 3656, 94, 2474, 203, 2473, -92, 4360, 206, 4355, 1920, 3337, 1936, 4147, 80, 4352, 76, 3316, 1998, 4347, 1930, 3655, 3944, 1495, 3228, 3328, 730, 1613, 1499, 2783, 762, 1930, 179, 2474, 198, 2793, 204, 1590, 1777, 2183, 3507, 1452, 4086, 1079, 3436, 676, 1697, -448, 296, -3285, 1738, -3346, 24)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 3, 2), PackedInt32Array(7, 8, 9, 0, 4, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 12, 15, 17, 18), PackedInt32Array(18, 17, 19, 20), PackedInt32Array(18, 20, 21), PackedInt32Array(22, 23, 24, 25, 26), PackedInt32Array(27, 22, 26), PackedInt32Array(27, 26, 28, 29)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(2473, -92, 3615, -88, 3656, 94, 4147, 80, 4352, 76, 4360, 206, 4355, 1920, 3337, 1936, 3314, 725, 2786, 758, 2795, 201, 2474, 203), PackedVector2Array(1930, 179, 2474, 198, 2793, 204, 2783, 762, 3328, 730, 3316, 1998, 4347, 1930, 3655, 3944, 1495, 3228, 1613, 1499), PackedVector2Array(-3346, 24, -3285, 1738, 676, 1697, 1079, 3436, 1452, 4086, 2183, 3507, 1590, 1777, -448, 296)])
 
 [node name="Outside" instance=ExtResource("1_utmej")]
 script = ExtResource("2_di07v")
@@ -79,7 +79,7 @@ metadata/_edit_lock_ = true
 
 [node name="Soil" type="Sprite2D" parent="Ground" index="0"]
 texture_repeat = 2
-position = Vector2(549, 522)
+position = Vector2(396, 531)
 texture = ExtResource("3_kvynf")
 region_enabled = true
 region_rect = Rect2(-316.976, -186.808, 24983.8, 7249.42)

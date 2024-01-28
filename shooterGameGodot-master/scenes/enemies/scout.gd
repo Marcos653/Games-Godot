@@ -14,6 +14,7 @@ func hit():
 		vulnerable = false
 		$Timers/HitTimer.start()
 		$Sprite2D.material.set_shader_parameter("progress", 1)
+		$HitSound.play()
 		
 		if health <= 0:
 			await get_tree().create_timer(0,5).timeout
